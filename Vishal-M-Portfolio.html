@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishal M - Electronics & Communication Engineer</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#6366f1'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+}
+.hero-bg {
+background-image: url('port.jpg');
+background-size: cover;
+background-position: center;
+}
+.progress-bar {
+transition: width 1.5s ease-in-out;
+}
+.skill-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1);
+}
+.project-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 30px -10px rgba(59, 130, 246, 0.15);
+}
+.timeline-item {
+position: relative;
+}
+.timeline-item::before {
+content: '';
+position: absolute;
+left: -25px;
+top: 15px;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background-color: #3b82f6;
+}
+.timeline-item::after {
+content: '';
+position: absolute;
+left: -19px;
+top: 27px;
+width: 2px;
+height: calc(100% + 20px);
+background-color: #e5e7eb;
+}
+.timeline-item:last-child::after {
+display: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: #3b82f6;
+cursor: pointer;
+}
+.hexagon {
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.hexagon:hover {
+transform: scale(1.05);
+background-color: rgba(59, 130, 246, 0.1);
+}
+.animated-bg {
+background: linear-gradient(-45deg, #f0f9ff, #e0f2fe, #bae6fd, #7dd3fc);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+.typing-animation {
+border-right: 2px solid #3b82f6;
+white-space: nowrap;
+overflow: hidden;
+animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: #3b82f6 }
+}
+.floating {
+animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full bg-white bg-opacity-95 shadow-sm z-50">
+<div class="container mx-auto px-6 py-3 flex justify-between items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">Vishal M</a>
+<div class="hidden md:flex space-x-8">
+<a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+<a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+<a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+<a href="#conferences" class="text-gray-700 hover:text-primary transition-colors">Conferences</a>
+<a href="#interests" class="text-gray-700 hover:text-primary transition-colors">Interests</a>
+<a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu -->
+<div class="hidden fixed inset-0 bg-white z-50 pt-16">
+<div class="container mx-auto px-6 py-8 flex flex-col space-y-6">
+<a href="#about" class="text-xl text-gray-700 hover:text-primary transition-colors">About</a>
+<a href="#skills" class="text-xl text-gray-700 hover:text-primary transition-colors">Skills</a>
+<a href="#projects" class="text-xl text-gray-700 hover:text-primary transition-colors">Projects</a>
+<a href="#conferences" class="text-xl text-gray-700 hover:text-primary transition-colors">Conferences</a>
+<a href="#interests" class="text-xl text-gray-700 hover:text-primary transition-colors">Interests</a>
+<a href="#contact" class="text-xl text-gray-700 hover:text-primary transition-colors">Contact</a>
+<button class="absolute top-4 right-6 w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="hero-bg pt-24 pb-16 md:pt-32 md:pb-24">
+<div class="container mx-auto px-6">
+<div class="w-full flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+<span class="typing-animation inline-block overflow-hidden">Vishal M </span>
+</h1>
+<h2 class="text-xl md:text-2xl text-primary font-medium mb-6">Electronics & Communication Engineer</h2>
+<p class="text-gray-700 text-lg mb-8 max-w-lg">Building innovative embedded and data-driven solutions for real-world problems. Specializing in IoT, data analytics, and embedded systems.</p>
+<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+<a href="#projects" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">View Projects</a>
+<a href="#contact" class="border border-primary text-primary px-8 py-3 !rounded-button font-medium hover:bg-blue-50 transition-colors whitespace-nowrap">Contact Me</a>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative w-84 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-xl overflow-hidden border-4 border-white">
+<img src="C:\Users\visha\OneDrive\Pictures\Screenshot 2025-07-03 010547.png"
+alt="Vishal M"
+class="w-full h-full object-cover object-top">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="w-full md:w-1/2 bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-graduation-cap-fill ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Academic Background</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center mr-3">
+<i class="ri-building-4-line ri-lg text-gray-700"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Bannari Amman Institute of Technology</h4>
+<p class="text-gray-600 text-sm">Sathyamangalam, Tamil Nadu</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center mr-3">
+<i class="ri-book-open-line ri-lg text-gray-700"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">B.E. Electronics and Communication Engineering</h4>
+<p class="text-gray-600 text-sm">2022 - 2026</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center mr-3">
+<i class="ri-medal-line ri-lg text-gray-700"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">CGPA: 70.3%</h4>
+<div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 70.3%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-user-heart-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Professional Summary</h3>
+</div>
+<p class="text-gray-700 mb-6 leading-relaxed">
+I am a passionate Electronics and Communication Engineer with a strong foundation in embedded systems, IoT, and data analytics. My goal is to leverage technology to create innovative solutions that address real-world challenges.
+</p>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-3 mt-1">
+<i class="ri-target-line ri-lg text-gray-700"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Goal</h4>
+<p class="text-gray-700">To build innovative embedded and data-driven solutions for real-world problems</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-3 mt-1">
+<i class="ri-heart-line ri-lg text-gray-700"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Passion</h4>
+<p class="text-gray-700">Creating technology that makes a meaningful impact on people's lives</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Programming Languages -->
+<div class="skill-card bg-white rounded-lg shadow-md p-8">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-code-s-slash-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Programming</h3>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">C</span>
+<span class="text-gray-600">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Java</span>
+<span class="text-gray-600">75%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 75%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Python</span>
+<span class="text-gray-600">80%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 80%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Tools -->
+<div class="skill-card bg-white rounded-lg shadow-md p-8">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-tools-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Technical Tools</h3>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">HTML/CSS</span>
+<span class="text-gray-600">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Arduino</span>
+<span class="text-gray-600">90%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Power BI</span>
+<span class="text-gray-600">80%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 80%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Tableau</span>
+<span class="text-gray-600">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 75%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Excel</span>
+<span class="text-gray-600">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Soft Skills -->
+<div class="skill-card bg-white rounded-lg shadow-md p-8">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-team-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Soft Skills</h3>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Critical Thinking</span>
+<span class="text-gray-600">90%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Leadership</span>
+<span class="text-gray-600">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Time Management</span>
+<span class="text-gray-600">85%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-1">
+<span class="text-gray-700 font-medium">Communication</span>
+<span class="text-gray-600">80%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full progress-bar" style="width: 80%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Skills Chart -->
+<div class="mt-16 bg-white rounded-lg shadow-md p-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Skills Overview</h3>
+<div id="skillsChart" class="w-full h-80"></div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<!-- Project 1 -->
+<div class="flex flex-col lg:flex-row mb-20 project-card bg-white rounded-lg shadow-md overflow-hidden">
+<div class="w-full lg:w-1/2 h-64 lg:h-auto relative">
+<img src="https://readdy.ai/api/search-image?query=high%20quality%20image%20of%20a%20modern%20fruit%20detection%20system%20with%20camera%20and%20sensors%20scanning%20various%20fruits%20on%20a%20conveyor%20belt%2C%20some%20fruits%20highlighted%20with%20digital%20overlays%20showing%20detection%20of%20ripped%20areas%2C%20professional%20laboratory%20setting%2C%20clean%20background%2C%20high-tech%20appearance&width=800&height=600&seq=project1&orientation=landscape"
+alt="Ripped Fruit Detection System"
+class="w-full h-full object-cover object-top">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+<div class="p-6">
+<h3 class="text-white text-2xl font-bold">Ripped Fruit Detection</h3>
+<p class="text-white/80">Computer Vision & IoT</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 p-8">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+<i class="ri-eye-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Ripped Fruit Detection</h3>
+</div>
+<p class="text-gray-700 mb-6">
+The Ripped Fruit Detection project uses image processing,
+sensors, and machine learning to identify ripened fruits. By
+leveraging algorithms like CNNs and microcontrollers, it
+automates fruit sorting for agriculture.
+</p>
+<div class="space-y-4 mb-8">
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-checkbox-circle-line ri-lg text-primary"></i>
+</div>
+<div>
+<p class="text-gray-700">Achieved 82% accuracy in detecting damaged areas</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-checkbox-circle-line ri-lg text-primary"></i>
+</div>
+<div>
+<p class="text-gray-700"> Reduces human effort required for fruit sorting. </p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-checkbox-circle-line ri-lg text-primary"></i>
+</div>
+<div>
+<p class="text-gray-700">Enhances efficiency in agricultural operations.</p>
+</div>
+</div>
+</div>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">
+<i class="ri-github-line mr-2"></i> View Code
+</button>
+<button class="border border-primary text-primary px-6 py-2 !rounded-button font-medium hover:bg-blue-50 transition-colors whitespace-nowrap">
+<i class="ri-slideshow-line mr-2"></i> Demo
+</button>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="flex flex-col lg:flex-row project-card bg-white rounded-lg shadow-md overflow-hidden">
+<div class="w-full lg:w-1/2 h-64 lg:h-auto relative order-1 lg:order-2">
+<img src="https://readdy.ai/api/search-image?query=high%20quality%20image%20of%20a%20modern%20mobile%20application%20interface%20showing%20a%20parking%20slot%20reservation%20system%2C%20with%20a%20map%20view%20of%20parking%20spaces%2C%20available%20and%20occupied%20slots%20clearly%20marked%2C%20payment%20options%20visible%2C%20clean%20UI%20design%2C%20smartphone%20mockup%20on%20clean%20background&width=800&height=600&seq=project2&orientation=landscape"
+alt="Mobile Slot Reservation System"
+class="w-full h-full object-cover object-top">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+<div class="p-6">
+<h3 class="text-white text-2xl font-bold">MOBILE-ENABLED SLOT RESERVATION SYSTEM FOR PARKING</h3>
+<p class="text-white/80">Mobile App Development</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 p-8 order-2 lg:order-1">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+<i class="ri-smartphone-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">MOBILE-ENABLED SLOT RESERVATION SYSTEM FOR PARKING</h3>
+</div>
+<p class="text-gray-700 mb-6">
+A mobile application that allows users to reserve parking slots in advance. The system uses IoT sensors to monitor parking space availability and provides real-time updates to users.
+</p>
+<div class="space-y-4 mb-8">
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-checkbox-circle-line ri-lg text-primary"></i>
+</div>
+<div>
+<p class="text-gray-700"> It optimizes resources, reduces
+manual errors, and improves convenience, with applications in
+parking and facility management.
+</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-checkbox-circle-line ri-lg text-primary"></i>
+</div>
+<div>
+<p class="text-gray-700">Integrated payment gateway for seamless transactions</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-checkbox-circle-line ri-lg text-primary"></i>
+</div>
+<div>
+<p class="text-gray-700">Implemented real-time notification system for users</p>
+</div>
+</div>
+</div>
+<div class="flex space-x-4">
+<button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">
+<i class="ri-github-line mr-2"></i> View Code
+</button>
+<button class="border border-primary text-primary px-6 py-2 !rounded-button font-medium hover:bg-blue-50 transition-colors whitespace-nowrap">
+<i class="ri-slideshow-line mr-2"></i> Demo
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Conferences Section -->
+<section id="conferences" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Conference Presentations</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="bg-white rounded-lg shadow-md p-8 md:p-12">
+<div class="relative pl-8 md:pl-12 space-y-12">
+<!-- Conference 1 -->
+<div class="timeline-item">
+<div class="bg-white rounded-lg p-6">
+<div class="flex flex-col md:flex-row md:items-center mb-4">
+<div class="flex items-center mb-3 md:mb-0 md:mr-6">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+<i class="ri-ai-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Data Analysis on Airports </h3>
+</div>
+<span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 [rounded-full">18th and 19th of February 2023</span>
+</div>
+<p class="text-gray-700 mb-4">
+Presented a paper in Vishvam Data Analysis of Prayatna’23 held at PSG College of Technology,Coimbatore.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Data Analytics</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Visualization of data</span>
+<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Tableau</span>
+</div>
+</div>
+</div>
+<!-- Conference 2 -->
+<div class="timeline-item">
+<div class="bg-white rounded-lg p-6">
+<div class="flex flex-col md:flex-row md:items-center mb-4">
+<div class="flex items-center mb-3 md:mb-0 md:mr-6">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+<i class="ri-device-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900"> Fresh and Rotten Fruit Detection Using Raseberry Pi</h3>
+</div>
+<span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">19th -20th April 2023</span>
+</div>
+<p class="text-gray-700 mb-4">
+Presented a paper in the ISTE sponsored two days National level Conference on Emerging Trends in Engineering Science & Technology,
+“ETEST-23” at Hindusthan Institute of Technology, Coimbatore.
+</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">IoT</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Raseberry Pi</span>
+<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">PLC</span>
+</div>
+</div>
+</div>
+<!-- Conference 3 -->
+<div class="timeline-item">
+<div class="bg-white rounded-lg p-6">
+<div class="flex flex-col md:flex-row md:items-center mb-4">
+<div class="flex items-center mb-3 md:mb-0 md:mr-6">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+<i class="ri-bar-chart-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Ripped fruit detection</h3>
+</div>
+<span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">4th March 2025</span>
+</div>
+<p class="text-gray-700 mb-4">
+Presented the paper  in 1 National Level Conference on "Advancing Intelligence Using Quantum for Boundless Innovations in Technology" (NCAIQUBIT-2025) organized by the Department of Artifi-cial Intelligence and Data Science, Faculty of Engineering, Karpagam
+Academy of Higher Education, Coimbatore.</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Wifi Module</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Esp32-CAM</span>
+<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Artificial Intelligence</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Achievements Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Extracurricular Achievements</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Yoga Achievements -->
+<div class="bg-white rounded-lg shadow-md p-8">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-mental-health-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Yoga Excellence</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-medal-2-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">5th National Level Yoga Ranking Championship-2017</h4>
+<p class="text-gray-700">Gold medalist in Junior Asana Category.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-medal-2-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Tamilnadu Yoga Sports championship-2017</h4>
+<p class="text-gray-700">Secured 1-st in TamilNadu State Team Selection. </p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-medal-2-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Tamilnadu  State Level Yogasana championship-2016</h4>
+<p class="text-gray-700">Secured 4-th in the senior Category. </p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-medal-2-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">7th Tamilnadu State Level Yoga Competetion-2018</h4>
+<p class="text-gray-700">Secured 2-nd place in the common asanam Discipline.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Additional Achievements -->
+<div class="bg-white rounded-lg shadow-md p-8">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-trophy-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">Other Achievements</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-calendar-event-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">International Yoga Day</h4>
+<p class="text-gray-700">Lead performer at College celebration (2023)</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-article-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">World Skills</h4>
+<p class="text-gray-700">As the participant Represented the college BIT</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-8 h-8 flex items-center justify-center mr-3 mt-1">
+<i class="ri-heart-pulse-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Yoga Club Activities</h4>
+<p class="text-gray-700">As the student coordinators with some of my friends we organized and completed the yoga training program for our college students.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Areas of Interest Section -->
+<section id="interests" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Areas of Interest</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Data Analytics -->
+<div class="hexagon bg-white shadow-md p-6 flex flex-col items-center text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+<i class="ri-circuit-board-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Data Analytics</h3>
+<p class="text-gray-600 text-sm">Extracting insights from data to drive decision-making and innovation.</p>
+</div>
+<!-- IoT -->
+<div class="hexagon bg-white shadow-md p-6 flex flex-col items-center text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+<i class="ri-wifi-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Internet of Things</h3>
+<p class="text-gray-600 text-sm">Connecting devices and systems to create smart, data-driven solutions</p>
+</div>
+<!-- Front-end Development -->
+<div class="hexagon bg-white shadow-md p-6 flex flex-col items-center text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+<i class="ri-bar-chart-2-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Full Stack Basics</h3>
+<p class="text-gray-600 text-sm">Building end-to-end applications with frontend and backend technologies.</p>
+</div>
+<!-- PCB Designing -->
+<div class="hexagon bg-white shadow-md p-6 flex flex-col items-center text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+<i class="ri-code-box-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">PCB Design</h3>
+<p class="text-gray-600 text-sm">Specialized in creating complex multi-layer PCB designs using industry-standard tools like Altium Designer.</p>
+</div>
+</div>
+<!-- Interest Chart -->
+<div class="mt-16 bg-white rounded-lg shadow-md p-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Interest Distribution</h3>
+<div id="interestChart" class="w-full h-80"></div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 animated-bg">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="w-full lg:w-1/2 bg-white rounded-lg shadow-md p-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Send Me a Message</h3>
+
+<form class="space-y-6" name="google-sheet" id="contact-form">
+  <div>
+    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+    <input type="text" id="name" name="fullName" required
+      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+      placeholder="John Doe">
+  </div>
+
+  <div>
+    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Your Email</label>
+    <input type="email" id="email" name="email" required
+      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+      placeholder="john@example.com">
+  </div>
+
+  <div>
+    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+    <input type="text" id="subject" name="subject" required
+      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+      placeholder="Project Inquiry">
+  </div>
+
+  <div>
+    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+    <textarea id="message" name="message" rows="4" required
+      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+      placeholder="Your message here..."></textarea>
+  </div>
+
+  <button type="submit"
+    class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap w-full">
+    Send Message
+  </button>
+</form>
+
+
+</div>
+<div class="w-full lg:w-1/2 bg-white rounded-lg shadow-md p-8">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1">
+<i class="ri-mail-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Email</h4>
+<p class="text-gray-700">vishalm25122004@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1">
+<i class="ri-phone-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Phone</h4>
+<p class="text-gray-700">+91 9025767345</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4 mt-1">
+<i class="ri-map-pin-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Location</h4>
+<p class="text-gray-700">Gobichettipalayam, Erode , Tamil Nadu, India</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="font-medium text-gray-900 mb-4">Connect With Me</h4>
+<div class="flex space-x-4">
+<a href="https://www.linkedin.com/in/vishal-m-a43877285/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-blue-100 transition-colors" title="Connect on LinkedIn">
+<i class="ri-linkedin-fill ri-lg text-gray-700 hover:text-primary"></i>
+</a>
+<a href="https://github.com/dashboard" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-blue-100 transition-colors" title="Follow on GitHub">
+<i class="ri-github-fill ri-lg text-gray-700 hover:text-primary"></i>
+</a>
+<a href="https://twitter.com/vishal_m_ece" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-blue-100 transition-colors" title="Follow on Twitter">
+<i class="ri-twitter-fill ri-lg text-gray-700 hover:text-primary"></i>
+</a>
+<a href="https://instagram.com/vishal.m.electronics" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full hover:bg-blue-100 transition-colors" title="Follow on Instagram">
+<i class="ri-instagram-fill ri-lg text-gray-700 hover:text-primary"></i>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-6 md:mb-0">
+<h2 class="text-2xl font-['Pacifico'] text-white mb-2">Vishal M.</h2>
+<p class="text-gray-400">Electronics & Communication Engineer</p>
+</div>
+<div class="flex flex-col items-center md:items-end">
+<p class="text-gray-400 mb-2">© 2025 Vishal M. All rights reserved.</p>
+<p class="text-gray-400">Last updated:August 25, 2025</p>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button -->
+<div class="fixed bottom-6 right-6 z-40">
+<button id="scrollToTop" class="w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+</div>
+<!-- Scripts -->
+<script id="navToggle">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('.md\\:hidden');
+const mobileMenu = document.querySelector('.hidden.fixed.inset-0');
+const closeButton = document.querySelector('.absolute.top-4.right-6');
+// Smooth scroll function
+function smoothScroll(target) {
+const element = document.querySelector(target);
+if (element) {
+window.scrollTo({
+top: element.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+}
+// Handle navigation clicks
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+smoothScroll(this.getAttribute('href'));
+if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+// Mobile menu toggle
+if (menuButton && mobileMenu && closeButton) {
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('hidden');
+});
+closeButton.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+});
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+});
+});
+}
+// Add hover animation for tools and icons
+document.querySelectorAll('.skill-card, .project-card, .hexagon').forEach(item => {
+item.addEventListener('mouseenter', function() {
+this.style.transform = 'translateY(-10px)';
+this.style.transition = 'transform 0.3s ease';
+});
+item.addEventListener('mouseleave', function() {
+this.style.transform = 'translateY(0)';
+});
+});
+});
+</script>
+<script id="scrollToTopButton">
+document.addEventListener('DOMContentLoaded', function() {
+const scrollToTopButton = document.getElementById('scrollToTop');
+window.addEventListener('scroll', function() {
+if (window.pageYOffset > 300) {
+scrollToTopButton.classList.remove('opacity-0');
+scrollToTopButton.classList.add('opacity-100');
+} else {
+scrollToTopButton.classList.remove('opacity-100');
+scrollToTopButton.classList.add('opacity-0');
+}
+});
+scrollToTopButton.addEventListener('click', function() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+});
+</script>
+<script id="skillsChartInit">
+document.addEventListener('DOMContentLoaded', function() {
+const skillsChart = echarts.init(document.getElementById('skillsChart'));
+const option = {
+animation: false,
+tooltip: {
+trigger: 'axis',
+axisPointer: {
+type: 'shadow'
+},
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+textStyle: {
+color: '#1f2937'
+}
+},
+grid: {
+top: 10,
+right: 30,
+bottom: 30,
+left: 80
+},
+xAxis: {
+type: 'value',
+max: 100,
+axisLabel: {
+color: '#1f2937'
+}
+},
+yAxis: {
+type: 'category',
+data: ['Excel', 'Tableau', 'Power BI', 'HTML/CSS', 'Arduino', 'Python', 'Java', 'C'],
+axisLabel: {
+color: '#1f2937'
+}
+},
+series: [
+{
+name: 'Skill Level',
+type: 'bar',
+data: [85, 75, 80, 85, 90, 80, 75, 85],
+itemStyle: {
+color: 'rgba(87, 181, 231, 1)',
+borderRadius: [0, 4, 4, 0]
+},
+emphasis: {
+itemStyle: {
+color: 'rgba(87, 181, 231, 0.8)'
+}
+}
+}
+]
+};
+skillsChart.setOption(option);
+window.addEventListener('resize', function() {
+skillsChart.resize();
+});
+});
+</script>
+<script id="interestChartInit">
+document.addEventListener('DOMContentLoaded', function() {
+const interestChart = echarts.init(document.getElementById('interestChart'));
+const option = {
+animation: false,
+tooltip: {
+trigger: 'item',
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+textStyle: {
+color: '#1f2937'
+}
+},
+legend: {
+top: 'bottom',
+left: 'center',
+textStyle: {
+color: '#1f2937'
+}
+},
+series: [
+{
+name: 'Interest Level',
+type: 'pie',
+radius: ['40%', '70%'],
+avoidLabelOverlap: false,
+itemStyle: {
+borderRadius: 10,
+borderColor: '#fff',
+borderWidth: 2
+},
+label: {
+show: false,
+position: 'center'
+},
+emphasis: {
+label: {
+show: true,
+fontSize: '18',
+fontWeight: 'bold',
+color: '#1f2937'
+}
+},
+labelLine: {
+show: false
+},
+data: [
+{ value: 40, name: 'Data Analytics', itemStyle: { color: 'rgba(87, 181, 231, 1)' } },
+{ value: 30, name: 'IoT', itemStyle: { color: 'rgba(141, 211, 199, 1)' } },
+{ value: 30, name: 'Front-end', itemStyle: { color: 'rgba(251, 191, 114, 1)' } },
+{ value: 10, name: 'Embedded Systems', itemStyle: { color: 'rgba(252, 141, 98, 1)' } }
+]
+}
+]
+};
+interestChart.setOption(option);
+window.addEventListener('resize', function() {
+interestChart.resize();
+});
+});
+
+</script>
+
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwoJGGVhKS5PXPgsXIUFT0LiJQ-sMjgVsF3anUj8CgZjN4aiAhkkr16zhadfGb59eR-/exec"; // <-- Replace with your Web App URL
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", e => {
+    e.preventDefault(); // prevent page reload
+
+    const formData = new FormData(form);
+
+    fetch(scriptURL, { method: "POST", body: formData })
+      .then(response => {
+        alert("✅ Your message has been submitted successfully!");
+        form.reset();
+        window.location.reload(); // <-- reload page after clicking OK
+      })
+      .catch(error => console.error("Error!", error.message));
+  });
+</script>
+
+
+
+</body>
+</html>
